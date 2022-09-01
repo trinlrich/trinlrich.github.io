@@ -1,0 +1,44 @@
+#header {
+    width: 100%;
+    height: 10%;
+    background-color: grey;
+    margin-bottom: 3px;
+}
+
+#content_left, #content_right {
+    width: 49%;
+    height: 89%;
+    border: solid;
+    display: inline-block;
+    text-align: center;
+}
+
+content_title {
+    color: red;
+    font-family: arial;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+fancy_title {
+    text-shadow: 4px 4px 3px #77f;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+#header li {
+    display: inline-block;
+    padding: 8px;
+}
+
+#footer {
+    width: 100%;
+    height: 10%;
+    background-color: grey;
+    margin-top: 3px;
+}

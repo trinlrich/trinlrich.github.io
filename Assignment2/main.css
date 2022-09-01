@@ -1,0 +1,18 @@
+.main_section {
+    width: 25%;
+    margin: auto;
+}
+
+.und_text {
+    text-decoration: underline;
+}
+
+.high_text {
+    background-color: orange;
+    font-weight: bold;
+}
+
+.red_text {
+    color: red;
+    font-weight: bold;
+}
