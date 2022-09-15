@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>J5 Example</title>
+    </head>
+
+    <body>
+        <script>
+            document.write("<h1>This is a javascript example!</h1>");
+            alert("This is an alert");
+            let yesorno = confirm("Press a button");
+            if (yesorno == true) {
+                document.write("You clicked OK!<br>");
+            } else {
+                document.write("You clicked CANCEL!<br>");
+            }
+            let name = prompt("What is your name?", "Guest");
+            if (name != null) {
+                document.write("Welcome " + name + "!<br>");
+            }
+
+            let x = 5;
+            let y = 10;
+            function sum() {
+                let sum = x + y;
+                console.log(sum);
+            }
+        </script>
+
+        <button type="button" onclick="sum()">Click Me!</button>
+    </body>
+</html>
