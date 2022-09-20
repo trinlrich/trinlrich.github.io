@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Forms</title>
+        <script defer src="class_example_9_20.js"></script>
+        <link href="class_example_9_20.css" type="text/css" rel="stylesheet">
+    </head>
+    <body style="text-align:center">
+        <h2>Name Form</h2>
+        <form name="name" style="margin-top:20px">
+            First Name: <input type="text" id="first_name" size="30" />
+            <br/> <br/>
+            Last Name: <input type="text" id="last_name" size="30" />
+            <br/> <br/>
+            <input type="button" id="submit_btn" value="Submit" onClick="getInput()" />
+            <input type="reset" value="Reset" />
+        </form>
+        <hr/>
+        <div id="output">
+        </div>
+        <hr/>
+        <h2> Sum Form </h2>
+        <form name="sum_form" style="margin-top:20px">
+            First Integer: <input type="text" id="first_int" size="30" />
+            <br/> <br/>
+            Second Integer: <input type="text" id="second_int" size="30" />
+            <br/> <br/>
+            Sum: <input type="text" id="sum" size="30" readonly/>
+            <br/> <br/>
+            <input type="button" id="sum_btn" value="Sum" onClick="sumIntegers()" />
+            <input type="reset" value="Reset" />
+        </form>
+    </body>
+</html>
