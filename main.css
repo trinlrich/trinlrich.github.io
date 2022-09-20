@@ -49,3 +49,17 @@ h1 {
     color: red;
     font-weight: bold;
 }
+
+.functionHeaders {
+  background-color: orange;
+}
+
+.operCol {
+  background-color: rgb(255, 227, 174);
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
