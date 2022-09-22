@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms Example</title>
+        <script src="class_example_9_22.js"></script>
+    </head>
+    <body>
+        <form name="split_test">
+                <h2>Enter Some Text</h2>
+                <textarea id="inText" rows="5" cols="20">
+                    This is where you enter a sentence.
+                </textarea>
+                <h2>The words you entered</h2>
+                <textarea id="outText" rows="20" cols="10">
+                    This is where your words will be.
+                </textarea>
+                <br/>
+                <input type="button" value="Split" onclick="getWords()"/>
+        </form>
+
+        <form name="checkboxes">
+        <fieldset>
+            <legend>Choose Items for Your Order:</legend>
+            <label><input type="radio" name="fruit" value="Apple" id="apple"/>Apple<br/></label>
+            <label><input type="radio" name="fruit"  value="Banana" id="apple"/>Banana<br/></label>
+            <label><input type="checkbox" name="fruit"  value="Orange" id="apple"/>Orange<br/></label>
+            <label><input type="checkbox" name="fruit"  value="Melon" id="apple"/>Melon<br/></label>
+            <input type="submit" value="Submit Order" onclick="submitOrder()"/>
+            <input type="reset" value="Clear"/> <br/>
+            <intut type="file"/>
+        </fieldset>
+        </form>
+        <h2>Order Summary:</h2>
+        <div id="order_summary"></div>
+
+    </body>
+</html>
