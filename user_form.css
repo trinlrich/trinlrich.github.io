@@ -1,0 +1,29 @@
+.form_fieldset {
+    width: 750px;
+    margin: auto;
+}
+
+.headings_div {
+    width: 200px;
+    display:inline-block;
+    text-align: right;
+    margin-right: 5px;
+    line-height: 27px
+}
+
+.inputs_div {
+    width: 500px;
+    display:inline-block;
+    text-align: left;
+    line-height: 24px
+}
+
+.empty {
+    color: red;
+    font-weight: bold;
+}
+
+.not_valid {
+    color: orange;
+    font-weight: bold;
+}

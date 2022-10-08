@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form</title>
+        <link href="user_form.css" type="text/css" rel="stylesheet">
+        <link href="main.css" type="text/css" rel="stylesheet">
+        <script src="validation.js"></script>
+    </head>
+
+    <body style="text-align: center">
+        <div class="topnav">
+            <a href="https://trinlrich.github.io/index.html">Index</a>
+            <a href="https://trinlrich.github.io/introduction.html">Introduction</a>
+            <a href="https://trinlrich.github.io/little_prince.html">Little Prince</a>
+			<a href="https://trinlrich.github.io/calculator.html">Calculator</a>
+            <a class="active" href="https://trinlrich.github.io/form.html">Form</a>
+        </div>
+        <br/>
+
+        <fieldset class="form_fieldset">
+            <legend><h1>User Info Form</h1></legend>
+            <form name="info_form">
+                <div class="headings_div">
+                    Username: <br/>
+                    Email: <br/>
+                    Phone Number: <br/>
+                    Password: <br/>
+                    Confirm Password: <br/>
+                    Gender: <br/>
+                    Age Group: <br/>
+                    Favorite Music Genre: 
+                </div>
+
+                <div class="inputs_div">
+                    <!--Username--><textarea id="username" rows="1"></textarea><br/>
+                    <!--Email--><textarea id="email" rows="1"></textarea><br/>
+                    <!--Phone Number--><textarea id="phone" rows="1"></textarea><br/>
+                    <!--Password--><textarea id="password" rows="1"></textarea><br/>
+                    <!--Confirm Password--><textarea id="conf_password" rows="1"></textarea><br/>
+
+                    <!--Gender-->
+                    <label><input type="radio" class="gender_items" name="gender" value="Female" id="female"/>Female</label>
+                    <label><input type="radio" class="gender_items" name="gender" value="Male" id="male"/>Male</label>
+                    <label><input type="radio" class="gender_items" name="gender" value="Other" id="other"/>Other</label><br/>
+
+                    <!--Age Group-->
+                    <select name="age_menu" id="age_menu">
+                        <option value=""></option>
+                        <option value="&lt; 21 years old">&lt; 21 years old</option>
+                        <option value="21 - 25 years old">21 - 25 years old</option>
+                        <option value="26 - 35 years old">26 - 35 years old</option>
+                        <option value="36 - 50 years old">36 - 50 years old</option>
+                        <option value="&gt; 50 years old">&gt; 50 years old</option>
+                    </select><br/>
+
+                    <!--Favorite Music Genre-->
+                    <label><input type="checkbox" name="genre" value="Pop" id="pop"/>Pop</label>
+                    <label><input type="checkbox" name="genre" value="HipHop" id="hiphop"/>HipHop</label>
+                    <label><input type="checkbox" name="genre" value="Jazz" id="jazz"/>Jazz</label>
+                    <label><input type="checkbox" name="genre" value="Rock" id="rock"/>Rock</label>
+                    <label><input type="checkbox" name="genre" value="Classical Music" id="classical"/>Classical Music</label>
+                    <label><input type="checkbox" name="genre" value="Country" id="country"/>Country</label>
+                </div><br/>
+                <input type="button" value="Submit" onclick="validate()"/>
+                <input type="reset" value="Clear" onclick="clear_form()"/>
+            </form>
+        </fieldset>
+        <br/>
+        <div id="form_errors"></div>
+    </body>
+</html>

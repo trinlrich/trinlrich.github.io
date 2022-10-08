@@ -6,25 +6,25 @@
     </head>
     <body>
         <form name="split_test">
-                <h2>Enter Some Text</h2>
-                <textarea id="inText" rows="5" cols="20">
-                    This is where you enter a sentence.
-                </textarea>
-                <h2>The words you entered</h2>
-                <textarea id="outText" rows="20" cols="10">
-                    This is where your words will be.
-                </textarea>
-                <br/>
-                <input type="button" value="Split" onclick="getWords()"/>
+            <h2>Enter Some Text</h2>
+            <textarea id="inText" rows="5" cols="20">
+                This is where you enter a sentence.
+            </textarea>
+            <h2>The words you entered</h2>
+            <textarea id="outText" rows="20" cols="10">
+                This is where your words will be.
+            </textarea>
+            <br/>
+            <input type="button" value="Split" onclick="getWords()"/>
         </form>
 
         <form name="checkboxes">
         <fieldset>
             <legend>Choose Items for Your Order:</legend>
             <label><input type="radio" name="fruit" value="Apple" id="apple"/>Apple<br/></label>
-            <label><input type="radio" name="fruit"  value="Banana" id="apple"/>Banana<br/></label>
-            <label><input type="checkbox" name="fruit"  value="Orange" id="apple"/>Orange<br/></label>
-            <label><input type="checkbox" name="fruit"  value="Melon" id="apple"/>Melon<br/></label>
+            <label><input type="radio" name="fruit"  value="Banana" id="banana"/>Banana<br/></label>
+            <label><input type="checkbox" name="fruit"  value="Orange" id="orange"/>Orange<br/></label>
+            <label><input type="checkbox" name="fruit"  value="Melon" id="melon"/>Melon<br/></label>
             <input type="submit" value="Submit Order" onclick="submitOrder()"/>
             <input type="reset" value="Clear"/> <br/>
             <intut type="file"/>
