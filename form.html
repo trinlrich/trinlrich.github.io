@@ -5,7 +5,7 @@
         <title>Form</title>
         <link href="user_form.css" type="text/css" rel="stylesheet">
         <link href="main.css" type="text/css" rel="stylesheet">
-        <script src="validation.js"></script>
+        <script src="validation_redo.js"></script>
     </head>
 
     <body style="text-align: center">
@@ -33,11 +33,11 @@
                 </div>
 
                 <div class="inputs_div">
-                    <!--Username--><textarea id="username" rows="1"></textarea><br/>
-                    <!--Email--><textarea id="email" rows="1"></textarea><br/>
-                    <!--Phone Number--><textarea id="phone" rows="1"></textarea><br/>
-                    <!--Password--><textarea id="password" rows="1"></textarea><br/>
-                    <!--Confirm Password--><textarea id="conf_password" rows="1"></textarea><br/>
+                    <!--Username--><input type="text" id="username" rows="1"></input><br/>
+                    <!--Email--><input type="text" id="email" rows="1"></input><br/>
+                    <!--Phone Number--><input type="text" id="phone" rows="1"></input><br/>
+                    <!--Password--><input type="text" id="password" rows="1"></input><br/>
+                    <!--Confirm Password--><input type="text" id="conf_password" rows="1"></input><br/>
 
                     <!--Gender-->
                     <label><input type="radio" class="gender_items" name="gender" value="Female" id="female"/>Female</label>
@@ -64,6 +64,7 @@
                 </div><br/>
                 <input type="button" value="Submit" onclick="validate()"/>
                 <input type="reset" value="Clear" onclick="clear_form()"/>
+                <br/>
             </form>
         </fieldset>
         <br/>

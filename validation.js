@@ -10,21 +10,22 @@ function validate() {
 
     let output = "";
     let enter_string = "Please Enter ";
+    let regex = "";
 
     // Validate Username
+    regex = /^[a-z\d]{4,12}$/g;
     if (username.length > 0) {
-        if (username.length < 4 || username.length > 12 || username.toLowerCase() != username) {
+        if (!regex.test(username)) {
             output += enter_string + "<span class='not_valid'>a valid username</span><br/><br/>";
         }
     } else {
         output += enter_string + "<span class='empty'>Username</span><br/><br/>";
     }
-
+    
     // Validate Email
+    regex = /^\w+\.?\w+@\w+(\.net|\.com|.org|\.edu)$/g;
     if (email.length > 0) {
-        let valid_domains = [".net", ".com", ".org", ".edu"];
-        let input_domain = email.substring(email.indexOf("."));
-        if (email.indexOf("@") == -1 || !valid_domains.includes(input_domain)) {
+        if (!regex.test(email)) {
             output += enter_string + "<span class='not_valid'>a valid email</span><br/><br/>";
         }
     } else {
@@ -32,21 +33,10 @@ function validate() {
     }
 
     // Validate Phone Number
+    regex = /^\(\d{3}\)\-\d{3}\-\d{4}$/g;
     if (phone.length > 0) {
-        if (phone.length == 14 && phone.indexOf("(") == 0 && phone.indexOf(")") == 4 &&  phone.indexOf("-") == 5 && phone.indexOf("-", phone.indexOf("-") + 1) == 9) {
-            phone = phone.replace("(", "");
-            phone = phone.replace(")", "");
-            phone = phone.replace("-", "");
-            phone = phone.replace("-", "");
-            console.log(phone)
-            console.log(parseInt(phone))
-            console.log(isNaN(parseInt(phone)))
-            console.log(parseInt(phone) == phone)
-            if (parseInt(phone) != phone || phone.length != 10) {
-                output += enter_string + "<span class='not_valid'>a valid phone number</span><br/><br/>";
-            }
-        } else {
-            output += enter_string + "<span class='not_valid'>a valid phone number</span><br/><br/>";
+        if (!regex.test(phone)) {
+            output += enter_string + "<span class='not_valid'>a valid phone</span><br/><br/>";
         }
     } else {
         output += enter_string + "<span class='empty'>Phone Number</span><br/><br/>";
@@ -55,39 +45,17 @@ function validate() {
     // Validate Password
     if (password.length > 0) {
         if (password.length > 8) {
-            let hasLower = false;
-            let hasUpper = false;
-            let hasNum = false;
-            let hasSpecChar = false;
-            let spec_chars = ["\\", "/", "[", "]", "{", "}", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", ";", "'", "\"", ":", "|", ",", ".", "<", ">", "?"];
-            for (let i = 0; i < password.length; i++) {
-                let letter = password[i];
-                if (!isNaN(parseInt(letter))) {
-                    hasNum = true;
-                } else {
-                    if (spec_chars.includes(letter)) {
-                        hasSpecChar = true;
-                    } else {
-                        if (letter.toLowerCase() == letter) {
-                            hasLower = true;
-                        }
-                        if (letter.toUpperCase() == letter) {
-                            hasUpper = true;
-                        }
-                    }
-                }
-            }
-            if (!(hasLower && hasUpper && hasNum && hasSpecChar)) {
-                console.log("missing req: " + hasLower + " " + hasUpper + " " + hasNum + " " + hasSpecChar);
-                output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>";
-            }
-        } else {
-            console.log("too short")
-            output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>";
-        }
-    } else {
-        output += enter_string + "<span class='empty'>Password</span><br/><br/>";
-    }
+            if (/[a-z]/g.test(password)) {
+                if (/[A-Z]/g.test(password)) {
+                    if (/[0-9]/g.test(password)) {
+                        if (/[\W]/g.test(password)) {
+                            if (/[\s]/g.test(password)) { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+                        } else { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+                    } else { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+                } else { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+            } else { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+        } else { output += enter_string + "<span class='not_valid'>a valid password</span><br/><br/>"; }
+    } else { output += enter_string + "<span class='empty'>Password</span><br/><br/>"; }
 
     // Validate Gender 
     for (let i = 0; i < gender_items.length; i++) {
@@ -116,9 +84,4 @@ function validate() {
             window.location.replace("https://trinlrich.github.io/");
         }
     }
-}
-
-function clear_form() {
-    document.getElementById("form_errors").innerHTML = "";
-    console.log("cleared");
 }
