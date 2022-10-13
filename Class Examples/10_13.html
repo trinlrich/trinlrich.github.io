@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            div {
+                width: 500px;
+                padding: 20px;
+                border: 1px dashed;
+            }
+            #div1 {
+                background: yellow;
+            }
+            #div2 {
+                background: red;
+            }
+            #div3 {
+                background: cyan;
+            }
+            #div4 {
+                background: green;
+            }
+            p {
+                background: white;
+            }
+        </style>
+        <script src="10_13.js"></script>
+    <body>
+        <h2>Click Events</h2>
+            <p ondblclick="reportEvent()">Double Click</p>
+            <p onmousedown="reportEvent()">Mouse Down</p>
+            <p onmouseup="reportEvent()">Mouse Up</p>
+            <div id="rep"></div>
+
+        <h2>Mouse Events</h2>
+            <div onmouseover="mouseOverEvent()" id="div1">
+                <p>
+                    mouseover: <span id="span1">0</span> 
+                </p>
+            </div>
+            <div onmouseenter="mouseEnterEvent()" id="div2">
+                <p>
+                    mouseenter: <span id="span2">0</span> 
+                </p>
+            </div>
+
+            <div onmouseleave="mouseLeaveEvent()" id="div3">
+                <p>
+                    mouseleave: <span id="span3">0</span> 
+                </p>
+            </div>
+            <div onmouseout="mouseOutEvent()" id="div4">
+                <p>
+                    mouseout: <span id="span4">0</span> 
+                </p>
+            </div>
+            <br/>
+
+        <h2>On Change</h2>
+            <input type="text" onchange="alert(this.value)">
+            <br/>
+            <select onchange="alert(this.value)">
+                <option value="first">First</option>
+                <option value="second">Second</option>
+            </select>
+
+        <h2>Register Handlers</h2>
+            <p onclick="registerRed()">Register Handler</p>
+            <p id="p">Click Me!</p>
+            <p onclick="removeRed()">Remove Handler</p>
+
+        <h2>Event Handler</h2>
+            <p onclick="foo(event)">This is a paragraph</p>
+            <div id="show"></div>
+    </body>
+</html>

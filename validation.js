@@ -85,3 +85,7 @@ function validate() {
         }
     }
 }
+
+function clear_form() {
+    document.getElementById("form_errors").innerHTML = "";
+}
