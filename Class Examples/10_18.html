@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //jQuery code
+            $(document).ready(function() {
+                $("#showArea1").css({
+                    "width": "200px",
+                    "height": "200px",
+                    "border": "1px dotted black"
+                })
+                // Change div color and text
+                $("#showArea1").on({
+                    "click": function() {
+                        $(this).css("background-color", "lightgrey");
+                        $(this).html("You Clicked Here!");
+                    },
+                    "mouseenter": function() {
+                        $(this).css("background-color", "red");
+                        $(this).html("Hello There!");
+                    },
+                    "mouseleave": function() {
+                        $(this).css("background-color", "green");
+                        $(this).html("Goodbye!");
+                    }
+                })
+                // Hide paragraph
+                $("#par1").on("click", function() {
+                    $(this).hide(500);
+                })
+                $("#par2").on("click", function() {
+                    $(this).fadeOut(500);
+                })
+
+                // Button to hide paragraph
+                $("#show").on("click", function() {
+                    $("#showArea2").fadeIn();
+                })
+                $("#hide").on("click", function() {
+                    $("#showArea2").fadeOut();
+                })
+                $("#toggle").on("click", function() {
+                    $("#showArea2").toggle();
+                })
+                $("#fadeTo").on("click", function() {
+                    $("#showArea2").fadeTo("slow", 0.5);
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id="showArea1"></div>
+
+        <p id="par1">This is Paragraph 1</p>
+        <p id="par2">This is Paragraph 2</p>
+
+        <input id="show" type="button" value="Show Text"/>
+        <input id="hide" type="button" value="Hide Text"/>
+        <input id="toggle" type="button" value="Toggle Text"/>
+        <input id="fadeTo" type="button" value="Fade To"/>
+        <div id="showArea2" style="display: none">Paragraph</div>
+    </body>
+</html>
