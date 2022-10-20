@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#web_span").on({
+                    "mousemove": function(event) {
+                        $("#x").html(event.pageX);
+                        $("#y").html(event.pageY);
+                    }
+                })
+
+                $(".logo").on({
+                    "mouseenter": function(event) {
+                        $("#in").html(event.target.id);
+                        $(this).fadeTo("slow", 0.5);
+                    },
+                    "mouseleave": function(event) {
+                        $("#out").html(event.target.id);
+                        $(this).fadeTo("slow", 1.0);
+                    }
+                })
+
+                $("#Amazon").on({
+                    "dblclick": function() {
+                        window.open("https://www.amazon.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/amazon.png' width='300px' height='300px'/>");
+                    }
+                })
+                $("#Facebook").on({
+                    "dblclick": function() {
+                        window.open("https://www.facebook.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/facebook.png' width='300px' height='300px'/>");
+                    }
+                })
+                $("#Instagram").on({
+                    "dblclick": function() {
+                        window.open("https://www.instagram.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/instagram.png' width='300px' height='300px'/>");
+                    }
+                })
+                $("#Pinterest").on({
+                    "dblclick": function() {
+                        window.open("https://www.pinterest.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/pinterest.png' width='300px' height='300px'/>");
+                    }
+                })
+                $("#Spotify").on({
+                    "dblclick": function() {
+                        window.open("https://open.spotify.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/spotify.png' width='300px' height='300px'/>");
+                    }
+                })
+                $("#Youtube").on({
+                    "dblclick": function() {
+                        window.open("https://www.youtube.com/", '_blank').focus();
+                    },
+                    "click": function() {
+                        $("#large_img").html("<img src='img/youtube.png' width='300px' height='300px'/>");
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <span id = web_span>
+            <img src="img/amazon.png" class="logo" id="Amazon" width="100px" height="100px"/>
+            <img src="img/facebook.png" class="logo" id="Facebook" width="100px" height="100px"/>
+            <img src="img/instagram.png" class="logo" id="Instagram" width="100px" height="100px"/>
+            <img src="img/pinterest.png" class="logo" id="Pinterest" width="100px" height="100px"/>
+            <img src="img/spotify.png" class="logo" id="Spotify" width="100px" height="100px"/>
+            <img src="img/youtube.png" class="logo" id="Youtube" width="100px" height="100px"/>
+        </span>
+        <p>In: <span id="in"></span></p>
+        <p >Out: <span id="out"></span></p>
+        <p>Mouse X: <span id="x"></span>, Y: <span id="y"></span></p>
+        <div id="large_img"></div>
+    </body>
+</html>
