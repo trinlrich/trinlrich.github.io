@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#show_tweets").click(function() {
+                    $.ajax({
+                        method: "GET",
+                        url: "/api/tweets",
+                        success: function(date) {
+                            for (i in data){
+                                $("#tweets-area").append("<p>" + data[i].text + "</p>");
+                            }
+                        }
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

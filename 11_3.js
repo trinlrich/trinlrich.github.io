@@ -1,12 +1,56 @@
 const http = require('http');
 const fs = require('fs');
-const url = require('url');
 
 http.createServer(function (req, res) {
-    // console.log(req);
     fs.readFile('11_3.html', function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data);
         res.end();
     });
-}).listen(3000);
+}).listen(2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (q.pathname == null) {
+//     fs.readFile('index.html', function(err, data) {
+//         res.writeHead(200, {'Content-Type': 'text/html'});
+//         res.write(data);
+//         res.end();
+//     });
+// } else if (q.pathname == "index.html") {
+//     fs.readFile('index.html', function(err, data) {
+//         res.writeHead(200, {'Content-Type': 'text/html'});
+//         res.write(data);
+//         res.end();
+//     });
+// } else if (q.pathname == "introduction.html") {
+//     fs.readFile('index.html', function(err, data) {
+//         res.writeHead(200, {'Content-Type': 'text/html'});
+//         res.write(data);
+//         res.end();
+//     });
+// }
