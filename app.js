@@ -7,7 +7,6 @@ http.createServer(function (req, res) {
     let filename = "";
     let filetype = "";
 
-    console.log(q.pathname);
     switch (q.pathname) {
         case "/":
         case "/index":
