@@ -21,7 +21,7 @@ app.all('/api/tweets', function (req, res, next) {
 });
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'htmldocs/index.html'));
+    res.sendFile(path.join(__dirname, '/11_8.html'));
 }) 
 
 app.get('/api/tweets', function(req, res) {
