@@ -3,20 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css'
 
 class ColorButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: this.props.value
-    };
-  }
-
   render() {
     return (
       <button 
-        style = {{color: this.state.color}}
-        onClick = {() => this.props.onClick(this.state.color)}
+        style = {{color: this.props.value}}
+        onClick = {() => this.props.onClick(this.props.color)}
       >
-        {this.state.color}
+        {this.props.value}
       </button>
     );
   }
@@ -25,8 +18,9 @@ class ColorButton extends React.Component {
 class Grid extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={
-        background: "white"
+
+    this.state = {
+      background: "white"
     }
   }
 
@@ -36,8 +30,9 @@ class Grid extends React.Component {
 
   renderButton(color) {
     return (
-      <ColorButton
-        value = {color}
+      <ColorButton 
+        value = {color} 
+        style = {{color: color}}
         onClick = {() => this.handleClick(color)}
       />
     )
@@ -45,7 +40,7 @@ class Grid extends React.Component {
 
   render () {
     return (
-      <div className="button_div" style={{background: this.state.background}}>
+      <div className="button_div" style = {{background: this.state.background}}>
         {this.renderButton("Red")}
         {this.renderButton("Green")}
         {this.renderButton("Blue")}

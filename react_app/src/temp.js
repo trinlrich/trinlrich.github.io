@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css'
 
 class ColorButton extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <button>Color</button>
