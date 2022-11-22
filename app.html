@@ -2,9 +2,24 @@
 
 <html>
     <head>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            function ajaxCall(request){
+                $.ajax({
+                    method: request,
+                    url: "/grade/" + request,
+                    success: function(data){
+                        $("#text_div").html("<h2>" + data + "</h2>");
+                    }
+                });
+            }
+            </script>
     </head>
-    <body style="text-align: center">
-        <h1>This is not a valid url</h1>
+    <body>
+        <button onclick="ajaxCall('get')">GET</button>
+        <button onclick="ajaxCall('post')">POST</button>
+        <button onclick="ajaxCall('put')">PUT</button>
+        <button onclick="ajaxCall('delete')">DELETE</button>
+        <div id="text_div"></div>
     </body>
 </html>
