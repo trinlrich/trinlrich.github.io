@@ -1,0 +1,25 @@
+#form_fieldset {
+    width: 750px;
+    margin: auto;
+}
+
+#headings_div {
+    display:inline-block;
+    text-align: right;
+    margin-right: 5px;
+    line-height: 27px
+}
+
+#inputs_div {
+    display:inline-block;
+    text-align: left;
+    line-height: 27px
+}
+
+.validate:valid {
+    background-color: palegreen;
+}
+
+.validate:invalid {
+    background-color: lightpink;
+}
